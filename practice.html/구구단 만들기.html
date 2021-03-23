@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="../css/all.min.css">
+    <style>
+    </style>
+</head>
+
+<body>
+
+    <input type="text" placeholder="출력하고 싶은 단을 입력하세요.">
+
+    <button onclick="multiple19()">19단!</button>
+
+    <div id="result"></div>
+
+    <script>
+        function multiple19() {
+            var user = document.querySelector("input").value;
+            user = Number(user);
+
+            var txt = "";
+
+            for (i = 1; i <=19; i++){
+                txt += user + "x" + i + "=" + (user * i) + "<br>"; 
+            }
+            document.querySelector("div").innerHTML = txt;
+        }
+    </script>
+</body>
+
+</html>
