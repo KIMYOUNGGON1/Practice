@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="../css/all.min.css">
+    <style>
+    </style>
+</head>
+
+<body>
+    <input type="text" id="input1" placeholder="2부터 50사이의 짝수를 입력하세요.">
+
+    <br>
+
+    <button onclick="click2()">정답!</button>
+
+    <h1 id="text"></h1>
+
+    <script>
+        var computer = (Math.floor(Math.random() * 25) + 1) * 2;
+        console.log(computer);
+
+        function click2() {
+            var user = document.getElementById("input1").value;    
+            console.log(user);
+            user = Number(user);
+
+            var txt = "";
+
+            if (computer == user) {
+                txt = "정답입니다."
+            }else if (computer > user) {
+                txt = "더 큰 수를 입력해주세요."
+            }else {
+                txt = "더 작은 수를 입력해주세요."
+            }
+            document.getElementById("text").innerHTML = txt;
+        }
+        
+    </script>
+
+
+</body>
+
+</html>
